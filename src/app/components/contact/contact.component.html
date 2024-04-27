@@ -1,0 +1,62 @@
+<div class="contact" id="contact">
+    <div class="content-inner">
+        <div class="content-header">
+            <h2>Contact</h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <p><i class="fa fa-user"></i>Kaushal Brahmbhatt</p>
+                    <p><i class="fa fa-tag"></i>Software Developer</p>
+                    <p><i class="fa fa-envelope"></i><a href="mailto:kaushalbrahmbhatt38@gmail.com">kaushalbrahmbhatt38@gmail.com</a></p>
+                    <p><i class="fa fa-phone"></i><a href="tel:+919104707545">+91-9104707545</a></p>
+                    <p><i class="fa fa-map-marker"></i>Ahmedabad, Gujarat, IN</p>
+                    <div class="social">
+                        <a class="btn" href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="First Name" formControlName="first_name"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Last Name" formControlName="last_name"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" formControlName="email"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="mobile" class="form-control" placeholder="Your Mobile number" formControlName="mobile"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Job Profile" formControlName="00N5j00000TrnOR"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company" formControlName="company"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="url" class="form-control" placeholder="Job Posting URL" formControlName="url"/>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="City" formControlName="city"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="State" formControlName="state"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Description"  formControlName="description"></textarea>
+                        </div>
+                        <div><button class="btn" type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
