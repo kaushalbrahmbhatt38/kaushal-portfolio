@@ -31,7 +31,7 @@ Run `ng build --configuration production --base-href` to build the project. The 
 ## Step to deploy Angular site to
 
 1. Install github pages tool for angular use command `npm install -g angular-cli-ghpages`
-2. Build the project using command `ng build --prod --base-href`
+2. Build the project using command `ng build --configuration production --base-href`
 3. Run `angular-cli-ghpages -d docs --no-silent` to deploy your project. `-d` tag take the location for build stored, in dist file
 
 Above command will create a new branch `gh-pages` in your repository and automatically push the dist build in that branch. Just navigate to `https://<username>.github.io/<reponame>/`
