@@ -26,7 +26,7 @@ Run `ng serve --configuration production` for a production server. Navigate to `
 
 ## Build for Production
 
-Run `ng build --configuration production` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build --configuration production --base-href` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Step to deploy Angular site to
 
