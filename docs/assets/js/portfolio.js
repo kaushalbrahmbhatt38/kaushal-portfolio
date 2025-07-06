@@ -42,7 +42,6 @@
     
 
     $('#portfolio-flters li').on('click', function () {
-        debugger;
         $("#portfolio-flters li").removeClass('filter-active');
         $(this).addClass('filter-active');
 

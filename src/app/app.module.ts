@@ -14,6 +14,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PortfolioComponent,
     ReviewComponent,
     ContactComponent,
-    EducationComponent
+    EducationComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,

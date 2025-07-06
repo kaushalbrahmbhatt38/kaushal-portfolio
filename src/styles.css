@@ -1,9 +1,9 @@
-@import url(assets/lib/fontawesome/css/fontawesome.min.css);
-@import url(assets/lib/fontawesome/css/brands.min.css);
-@import url(assets/lib/fontawesome/css/solid.min.css);
-@import url(assets/lib/slick/slick.css);
-@import url(assets/lib/slick/slick-theme.css);
-@import url(assets/lib/lightbox/css/lightbox.min.css);
+@import url('./assets/lib/fontawesome/css/fontawesome.min.css');
+@import url('./assets/lib/fontawesome/css/brands.min.css');
+@import url('./assets/lib/fontawesome/css/solid.min.css');
+@import url('./assets/lib/slick/slick.css');
+@import url('./assets/lib/slick/slick-theme.css');
+@import url('./assets/lib/lightbox/css/lightbox.min.css');
 
 /**********************************/
 /********** General CSS ***********/
