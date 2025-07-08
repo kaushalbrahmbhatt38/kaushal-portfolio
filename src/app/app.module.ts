@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HttpService } from './services/http/http.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,14 @@ import { BackToTopComponent } from './components/back-to-top/back-to-top.compone
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
