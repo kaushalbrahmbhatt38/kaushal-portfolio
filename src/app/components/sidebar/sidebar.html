@@ -1,1 +1,20 @@
-<p>sidebar works!</p>
+<nav class="nav-bar" [class.nav-scrolled]="isScrolled">
+  <div class="nav-inner">
+    <a class="nav-logo" (click)="scrollTo('header')" href="javascript:void(0)">
+      <span class="logo-bracket">&lt;</span>KB<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <button class="nav-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li><a (click)="scrollTo('header')" href="javascript:void(0)">Home</a></li>
+      <li><a (click)="scrollTo('experience')" href="javascript:void(0)">Experience</a></li>
+      <li><a (click)="scrollTo('skills')" href="javascript:void(0)">Expertise</a></li>
+      <li><a (click)="scrollTo('project')" href="javascript:void(0)">Projects</a></li>
+      <li><a (click)="scrollTo('credentials')" href="javascript:void(0)">Credentials</a></li>
+      <li><a class="nav-cta" (click)="scrollTo('contact')" href="javascript:void(0)">Contact</a></li>
+    </ul>
+  </div>
+</nav>
