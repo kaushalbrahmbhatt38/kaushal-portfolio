@@ -1,1 +1,84 @@
-<p>contact works!</p>
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Global Footprint</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-desc">Based in Hyderabad, India — open to Salesforce &amp; full-stack opportunities</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info-panel">
+        <div class="location-card">
+          <div class="location-pulse"></div>
+          <i class="fa fa-map-marker-alt"></i>
+          <div>
+            <h3>Hyderabad, India</h3>
+            <p>Available for remote &amp; hybrid engagements worldwide</p>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:kaushalbrahmbhatt38@gmail.com" class="contact-link">
+            <i class="fa fa-envelope"></i>
+            <span>kaushalbrahmbhatt38@gmail.com</span>
+          </a>
+          <a href="tel:+919104707545" class="contact-link">
+            <i class="fa fa-phone"></i>
+            <span>+91 91047 07545</span>
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+          </a>
+          <a class="btn btn-secondary" href="mailto:kaushalbrahmbhatt38@gmail.com">
+            <i class="fa fa-envelope"></i> Send an Email
+          </a>
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1rWV6BzXkOUAzVbkxJo3XAGt8BElzUrEV/view?usp=sharing" target="_blank" rel="noopener">
+            <i class="fa fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/kaushalbrahmbhatt38" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://kaushalbrahmbhatt38.github.io/kaushal-portfolio/" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-panel">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="First Name" formControlName="first_name"/>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last Name" formControlName="last_name"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" formControlName="email"/>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Mobile Number" formControlName="mobile"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Company" formControlName="company"/>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Job Profile" formControlName="00N5j00000TrnOR"/>
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="Tell me about your project or opportunity..." formControlName="description"></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
