@@ -1,1 +1,39 @@
-<p>about works!</p>
+<section class="section skills-section" id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Tech Stack</span>
+      <h2 class="section-title">Core Expertise</h2>
+      <!-- <p class="section-desc">Interactive 3D floating grid of technologies &amp; platforms</p> -->
+    </div>
+
+    <div class="skills-orbit" (mousemove)="onOrbitMove($event)" (mouseleave)="onOrbitLeave()"
+      [style.transform]="orbitTransform">
+      @for (cluster of skillClusters; track cluster.title; let ci = $index) {
+      <div class="skill-cluster" [style.--cluster-index]="ci">
+        <div class="cluster-header">
+          <div class="cluster-icon">
+            <i [class]="cluster.icon"></i>
+          </div>
+          <h3>{{ cluster.title }}</h3>
+        </div>
+        <div class="skill-pills">
+          @for (skill of cluster.skills; track skill; let si = $index) {
+          <span class="skill-pill" [style.--pill-delay]="si * 0.05 + 's'" (mouseenter)="hoveredSkill = skill"
+            (mouseleave)="hoveredSkill = ''" [class.pill-active]="hoveredSkill === skill">
+            {{ skill }}
+          </span>
+          }
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="skills-particles">
+      @for (tag of floatingTags; track tag.label) {
+      <span class="particle-tag" [style.left.%]="tag.x" [style.top.%]="tag.y" [style.animation-delay]="tag.delay">
+        {{ tag.label }}
+      </span>
+      }
+    </div>
+  </div>
+</section>

@@ -1,1 +1,51 @@
-<p>education works!</p>
+<section class="section credentials-section" id="credentials">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Accolades</span>
+      <h2 class="section-title">Credentials &amp; Achievements</h2>
+      <!-- <p class="section-desc">Industry certifications displayed in a floating 3D badge wall</p> -->
+    </div>
+
+    <div class="badge-showcase">
+      <div class="showcase-stats">
+        <div class="stat-card">
+          <span class="stat-number">7x</span>
+          <span class="stat-label">Salesforce Certified</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">2⭐</span>
+          <span class="stat-label">Trailhead Ranger</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number"><img src="images/agentblazer_Legend.png" alt="Agentblazer Legend"></span>
+          <span class="stat-label">Agentblazer Legend</span>
+        </div>
+      </div>
+
+      <div class="badge-grid">
+        @for (badge of badges; track badge.title; let i = $index) {
+        <div class="badge-card" [style.--badge-index]="i" (mouseenter)="hoveredBadge = i"
+          (mouseleave)="hoveredBadge = -1" [class.badge-hovered]="hoveredBadge === i">
+          <div class="badge-shine"></div>
+          <div class="badge-icon">
+            <i [class]="badge.icon"></i>
+          </div>
+          <h4>{{ badge.title }}</h4>
+          <span class="badge-type">{{ badge.type }}</span>
+        </div>
+        }
+      </div>
+
+      <div class="trailhead-banner">
+        <div class="banner-glow"></div>
+        <div class="banner-content">
+          <i class="fab fa-salesforce"></i>
+          <div>
+            <h3>Agentblazer / Agentforce Legend Track</h3>
+            <p>Pioneering AI-driven Salesforce solutions with AgentForce specialization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

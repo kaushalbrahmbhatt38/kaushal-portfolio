@@ -1,1 +1,47 @@
-<p>experience works!</p>
+<section class="section timeline-section" id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Career Journey</span>
+      <h2 class="section-title">Experience Timeline</h2>
+      <!-- <p class="section-desc">A scroll-driven 3D showroom of professional milestones</p> -->
+    </div>
+
+    <div class="timeline-3d">
+      <div class="timeline-spine">
+        <div class="spine-glow"></div>
+      </div>
+
+      @for (node of timelineNodes; track node.role; let i = $index) {
+      <div class="timeline-node" [class.node-left]="i % 2 === 0" [class.node-right]="i % 2 !== 0"
+        [class.node-active]="activeNode === i" (mouseenter)="activeNode = i" (mouseleave)="activeNode = -1">
+        <div class="node-connector">
+          <div class="node-dot">
+            <span class="dot-ring"></span>
+            <span class="dot-core"></span>
+          </div>
+        </div>
+
+        <div class="node-card" [style.transform]="activeNode === i ? nodeCardTransform : ''">
+          <div class="node-card-glow"></div>
+          <div class="node-meta">
+            <span class="node-date">{{ node.period }}</span>
+            <span class="node-location"><i class="fa fa-map-marker-alt"></i> {{ node.location }}</span>
+          </div>
+          <h3 class="node-company">{{ node.company }}</h3>
+          <h4 class="node-role">{{ node.role }}</h4>
+          <ul class="node-highlights">
+            @for (highlight of node.highlights; track highlight) {
+            <li>{{ highlight }}</li>
+            }
+          </ul>
+          <div class="node-tags">
+            @for (tag of node.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

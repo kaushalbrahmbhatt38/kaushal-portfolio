@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { ScrollService } from '../../service/scroll/scroll-service';
 
 interface Particle {
@@ -16,7 +16,7 @@ interface Particle {
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {
+export class Header implements AfterViewInit {
   @ViewChild('particleCanvas') particleCanvas!: ElementRef<HTMLCanvasElement>;
 
   heroVisible = false;
