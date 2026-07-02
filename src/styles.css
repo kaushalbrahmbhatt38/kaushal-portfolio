@@ -1,6 +1,6 @@
-@import url('./assets/lib/fontawesome/css/fontawesome.min.css');
-@import url('./assets/lib/fontawesome/css/brands.min.css');
-@import url('./assets/lib/fontawesome/css/solid.min.css');
+@import url('../public/lib/fontawesome/css/fontawesome.min.css');
+@import url('../public/lib/fontawesome/css/brands.min.css');
+@import url('../public/lib/fontawesome/css/solid.min.css');
 
 /* ============================================
    DESIGN TOKENS — Cloud & Code Theme
