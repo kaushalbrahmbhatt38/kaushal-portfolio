@@ -1,64 +1,84 @@
-<div class="contact" id="contact">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Contact</h2>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <p><i class="fa fa-user"></i>Kaushal Brahmbhatt</p>
-                    <p><i class="fa fa-tag"></i>Software Developer</p>
-                    <p><i class="fa fa-envelope"></i><a href="mailto:kaushalbrahmbhatt38@gmail.com">kaushalbrahmbhatt38@gmail.com</a></p>
-                    <p><i class="fa fa-phone"></i><a href="tel:+919104707545">+91-9104707545</a></p>
-                    <p><i class="fa fa-map-marker"></i>Ahmedabad, Gujarat, IN</p>
-                    <div class="social">
-                        <a class="btn" href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn" href="https://kaushalbrahmbhatt38.github.io/kaushal-portfolio/"><i class="fa-solid fa-globe"></i></a>
-                        <a class="btn" href="https://github.com/kaushalbrahmbhatt38"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form">
-                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="First Name" formControlName="first_name"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="Last Name" formControlName="last_name"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" formControlName="email"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="mobile" class="form-control" placeholder="Your Mobile number" formControlName="mobile"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Job Profile" formControlName="00N5j00000TrnOR"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Company" formControlName="company"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="url" class="form-control" placeholder="Job Posting URL" formControlName="url"/>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="City" formControlName="city"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="State" formControlName="state"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Description"  formControlName="description"></textarea>
-                        </div>
-                        <div><button class="btn" type="submit">Send Message</button></div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Global Footprint</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-desc">Based in Hyderabad, India — open to Salesforce &amp; full-stack opportunities</p>
     </div>
-</div>
+
+    <div class="contact-grid">
+      <div class="contact-info-panel">
+        <div class="location-card">
+          <div class="location-pulse"></div>
+          <i class="fa fa-map-marker-alt"></i>
+          <div>
+            <h3>Hyderabad, India</h3>
+            <p>Available for remote &amp; hybrid engagements worldwide</p>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:kaushalbrahmbhatt38@gmail.com" class="contact-link">
+            <i class="fa fa-envelope"></i>
+            <span>kaushalbrahmbhatt38@gmail.com</span>
+          </a>
+          <a href="tel:+919104707545" class="contact-link">
+            <i class="fa fa-phone"></i>
+            <span>+91 91047 07545</span>
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+          </a>
+          <a class="btn btn-secondary" href="mailto:kaushalbrahmbhatt38@gmail.com">
+            <i class="fa fa-envelope"></i> Send an Email
+          </a>
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1rWV6BzXkOUAzVbkxJo3XAGt8BElzUrEV/view?usp=sharing" target="_blank" rel="noopener">
+            <i class="fa fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/kaushalbrahmbhatt38" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://kaushalbrahmbhatt38.github.io/kaushal-portfolio/" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-panel">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="First Name" formControlName="first_name"/>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last Name" formControlName="last_name"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" formControlName="email"/>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Mobile Number" formControlName="mobile"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Company" formControlName="company"/>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Job Profile" formControlName="00N5j00000TrnOR"/>
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="Tell me about your project or opportunity..." formControlName="description"></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

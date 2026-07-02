@@ -7,9 +7,13 @@ import { Component, HostListener } from '@angular/core';
   styles: [`
     .back-to-top {
       display: none;
+      opacity: 0;
+      pointer-events: none;
     }
     .back-to-top.show {
-      display: block;
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
     }
   `]
 })

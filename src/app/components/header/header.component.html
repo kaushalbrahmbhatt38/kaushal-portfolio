@@ -1,19 +1,66 @@
-<!-- Header Start -->
-<div class="header" id="header">
-    <div class="content-inner">
-        <p>Hello 👋 I'm</p>
-        <h1>Kaushal Brahmbhatt</h1>
-        <h2 #typedTarget>Software Developer</h2>
-        <div #typedSource class="typed-text">Software Developer, Web Developer, Full Stack Developer, App Developer</div>
-    </div>
-</div>
-<!-- Header End -->
+<section class="hero" id="header">
+  <canvas #particleCanvas class="hero-canvas"></canvas>
+  <div class="hero-grid-overlay"></div>
 
-<!-- Large Button Start -->
-<div class="large-btn">
-    <div class="content-inner">
-        <a class="btn" href="https://drive.google.com/file/d/1rWV6BzXkOUAzVbkxJo3XAGt8BElzUrEV/view?usp=sharing" target="new"><i class="fa fa-download"></i>Resume</a>
-        <a class="btn" (click)="scrollTo('contact')" href="javascript:void(0)"><i class="fa fa-hands-helping"></i>Hire Me</a>
+  <div class="hero-inner">
+    <div class="hero-text" [class.visible]="heroVisible">
+      <!-- <p class="hero-greeting">
+        <span class="pulse-dot"></span>
+        Cloud &amp; Code Architect
+      </p> -->
+      <h1 class="hero-title">
+        Kaushalkumar<br>
+        <span class="gradient-text">Brahmbhatt</span>
+      </h1>
+      <h2 class="hero-subtitle">
+        Senior Full-Stack / Salesforce Developer
+        <span class="subtitle-divider">|</span>
+        Architecting Scalable Cloud Solutions
+      </h2>
+      <p class="hero-intro">
+        With over 5 years of experience specializing in Salesforce ecosystems and Java/Angular
+        full-stack developement, I translate complex business needs into functional, highly-scalable
+        architectures — using Salesforce ecosystems to microservice-driven enterprise platforms.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/kaushal-brahmbhatt-711499157" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+        </a>
+        <a class="btn btn-secondary" (click)="scrollTo('contact')" href="javascript:void(0)">
+          <i class="fa fa-envelope"></i> Send an Email
+        </a>
+        <a class="btn btn-outline" href="https://drive.google.com/file/d/1rWV6BzXkOUAzVbkxJo3XAGt8BElzUrEV/view?usp=sharing" target="_blank" rel="noopener">
+          <i class="fa fa-download"></i> Download Resume
+        </a>
+      </div>
     </div>
-</div>
-<!-- Large Button End -->
+
+    <div class="hero-visual" [class.visible]="heroVisible">
+      <div class="profile-frame" (mousemove)="onFrameMouseMove($event)" (mouseleave)="onFrameMouseLeave()">
+        <div class="frame-glow"></div>
+        <div class="frame-border">
+          <div class="frame-corner frame-corner-tl"></div>
+          <div class="frame-corner frame-corner-tr"></div>
+          <div class="frame-corner frame-corner-bl"></div>
+          <div class="frame-corner frame-corner-br"></div>
+          <div class="frame-inner" [style.transform]="frameTransform">
+            <img src="assets/img/kaushal-in-office.png" alt="Kaushalkumar Brahmbhatt - Senior Software Developer">
+          </div>
+        </div>
+        <div class="floating-badge badge-salesforce">
+          <i class="fab fa-salesforce"></i>
+          <span>7x Certified</span>
+        </div>
+        <div class="floating-badge badge-code">
+          <i class="fa fa-code"></i>
+          <span>Full-Stack</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>

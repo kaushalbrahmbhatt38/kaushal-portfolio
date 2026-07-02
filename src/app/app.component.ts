@@ -8,6 +8,7 @@ import { HttpService } from './services/http/http.service';
 })
 export class AppComponent implements OnInit {
   title = 'kaushal-portfolio';
+  currentYear = new Date().getFullYear();
 
   constructor(private httpService: HttpService) {}
 

@@ -1,46 +1,18 @@
-<!-- Sidebar Imported -->
 <app-sidebar></app-sidebar>
 
-<div class="content">
-  <!-- Header Imported -->
+<main class="main-content">
   <app-header></app-header>
-  
-  <!-- About Imported -->
-  <app-about></app-about>
-  
-  <!-- Education Imported -->
-  <app-education></app-education>
-  
-  <!-- Experience Imported -->
   <app-experience></app-experience>
-  
-  <!-- Service Imported -->
-  <!-- <app-service></app-service> -->
-  
-  <!-- Portfolio Imported -->
+  <app-about></app-about>
   <app-portfolio></app-portfolio>
-  
-  <!-- Review Imported -->
-  <!-- <app-review></app-review> -->
-  
-  <!-- Contact Imported -->
+  <app-education></app-education>
   <app-contact></app-contact>
-
-  <!-- Back to Top Imported -->
   <app-back-to-top></app-back-to-top>
-  
-  <!-- Footer Start -->
-  <div class="footer">
-      <div class="content-inner">
-          <div class="row align-items-center">
-              <div class="col-md-12 row">
-                <div class="mx-auto">
-                  <p>&copy; Copyright <a href="http://localhost:4200/">Kaushal Brahmbhatt</a>. All Rights Reserved</p>
-                </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Footer End -->
-</div>
-<router-outlet></router-outlet>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; {{ currentYear }} <a href="#">Kaushalkumar Brahmbhatt</a>. All Rights Reserved.</p>
+      <p class="footer-tagline">Architecting Scale &amp; Cloud Solutions</p>
+    </div>
+  </footer>
+</main>

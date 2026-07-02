@@ -1,69 +1,55 @@
-<div class="education" id="education">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Education</h2>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <span>Jun-2015 <i>to</i> May-2016</span>
-                    <h3>Bachelor of Technology in Information Technology</h3>
-                    <h4>Sankalchand Patel University</h4>
-                    <p>CGPA: 8.56</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <span>July-2016 <i>to</i> April-2050</span>
-                    <h3>High School</h3>
-                    <h4>M. B. Karnavat School</h4>
-                    <p>Percentage: 66.83%</p>
-                </div>
-            </div>
-        </div>
+<section class="section credentials-section" id="credentials">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Accolades</span>
+      <h2 class="section-title">Credentials &amp; Achievements</h2>
+      <!-- <p class="section-desc">Industry certifications displayed in a floating 3D badge wall</p> -->
     </div>
-</div>
-<div class="education achivements" id="education">
-    <div class="content-inner">
-        <div class="content-header">
-            <h2>Achivements</h2>
+
+    <div class="badge-showcase">
+      <div class="showcase-stats">
+        <div class="stat-card">
+          <span class="stat-number">7x</span>
+          <span class="stat-label">Salesforce Certified</span>
         </div>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Certified Administrator</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Advance Administrator</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Sales Cloud Consultant</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Platform App Builder</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Certified PD-I</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>Salesforce Certified AI Associate</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="edu-col">
-                    <p>2⭐ Trailhead Ranger</p>
-                </div>
-            </div>
+        <div class="stat-card">
+          <span class="stat-number">2⭐</span>
+          <span class="stat-label">Trailhead Ranger</span>
         </div>
+        <div class="stat-card">
+          <span class="stat-number"><img src="assets/img/agentblazer_Legend.png" alt="Agentblazer Legend"></span>
+          <span class="stat-label">Agentblazer Legend</span>
+        </div>
+      </div>
+
+      <div class="badge-grid">
+        <div
+          class="badge-card"
+          *ngFor="let badge of badges; let i = index"
+          [style.--badge-index]="i"
+          (mouseenter)="hoveredBadge = i"
+          (mouseleave)="hoveredBadge = -1"
+          [class.badge-hovered]="hoveredBadge === i"
+        >
+          <div class="badge-shine"></div>
+          <div class="badge-icon">
+            <i [class]="badge.icon"></i>
+          </div>
+          <h4>{{ badge.title }}</h4>
+          <span class="badge-type">{{ badge.type }}</span>
+        </div>
+      </div>
+
+      <div class="trailhead-banner">
+        <div class="banner-glow"></div>
+        <div class="banner-content">
+          <i class="fab fa-salesforce"></i>
+          <div>
+            <h3>Agentblazer / Agentforce Legend Track</h3>
+            <p>Pioneering AI-driven Salesforce solutions with AgentForce specialization</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</section>
