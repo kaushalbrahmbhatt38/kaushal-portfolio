@@ -36,14 +36,14 @@
     </div>
 
     <div class="hero-visual" [class.visible]="heroVisible">
-      <div class="profile-frame" (mousemove)="onFrameMouseMove($event)" (mouseleave)="onFrameMouseLeave()">
+      <div #profileFrame class="profile-frame">
         <div class="frame-glow"></div>
         <div class="frame-border">
           <div class="frame-corner frame-corner-tl"></div>
           <div class="frame-corner frame-corner-tr"></div>
           <div class="frame-corner frame-corner-bl"></div>
           <div class="frame-corner frame-corner-br"></div>
-          <div class="frame-inner" [style.transform]="frameTransform">
+          <div class="frame-inner">
             <img src="images/Kaushal_in_office_2.png" alt="Kaushalkumar Brahmbhatt - Senior Software Developer">
           </div>
         </div>
